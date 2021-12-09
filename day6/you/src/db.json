@@ -1,0 +1,90 @@
+{
+  "Todo": [
+    {
+      "title": "Learn Vue",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn Bootstrap",
+      "status": true,
+      "id": 3
+    },
+    {
+      "title": "Learn HTML",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "lear  HTML",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "lean tailwin",
+      "status": true,
+      "id": 6
+    },
+    {
+      "title": "learn Redux",
+      "status": false,
+      "id": 8
+    }
+  ],
+  "User": [
+    {
+      "UserName": "Virkam Aditya",
+      "Age": "30",
+      "Address": "WestBengal ",
+      "Department": "HR",
+      "Salary": "60000",
+      "IsMarried": true,
+      "id": 4
+    },
+    {
+      "UserName": "Prakash Chandra",
+      "Age": "28",
+      "Address": "Dhanbad",
+      "Department": "FrontEndDev",
+      "Salary": "10000000",
+      "IsMarried": true,
+      "id": 5
+    },
+    {
+      "UserName": "Akash Chandra",
+      "Age": "27",
+      "Address": "Asansol",
+      "Department": "BackEndDev",
+      "Salary": "120000",
+      "IsMarried": false,
+      "id": 6
+    },
+    {
+      "UserName": "Nitish Lal",
+      "Age": "27",
+      "Address": "Bihar",
+      "Department": "Civil Enginner",
+      "Salary": "1500000",
+      "IsMarried": false,
+      "id": 7
+    },
+    {
+      "UserName": "Somesh ",
+      "Age": "26",
+      "Address": "Bangalore",
+      "Department": "Civil Enginner",
+      "Salary": "110000",
+      "IsMarried": true,
+      "id": 8
+    },
+    {
+      "UserName": "Chancal Haldar",
+      "Age": "28",
+      "Address": "Chandigarh",
+      "Department": "HR",
+      "Salary": "12409",
+      "IsMarried": false,
+      "id": 9
+    }
+  ]
+}
