@@ -1,0 +1,6 @@
+Goal: achieve private routing.
+
+1. let user login. (login.jsx)
+2. check the route I am visiting is private.
+    2.1 create auth context, to store login token
+3. if it's private, redirect to login.

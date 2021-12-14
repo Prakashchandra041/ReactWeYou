@@ -24,25 +24,7 @@ export const TableList = ({details,setDetails}) => {
   }
 
   return (
-      <div>
-          <hr /><br />
-           {["Salary in asc", "Salary in desc"].map((order,i) => (
-             <button onClick={()=>{
-               if (i === 0) {
-                 setAsc(true);
-               }
-               else {
-                 setAsc(false)
-               }
-             }}>{order}</button>
-             
-           ))} <br /><br />
-      
-      {[ "ALL","HR", "FrontEndDev", "BackEndDev", "Network Enginner", "Civil Enginner"].map((dep, i) => {
-        return <button onClick={() => {
-           
-     }}>{dep}</button>
-           })}  
+     <div>
       <br /><br />
       <table style={{margin:"auto"}}>
         <tr>
