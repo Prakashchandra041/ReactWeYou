@@ -6,7 +6,6 @@ export function Third() {
     return <>
         <div>
             State is :{state}
-            <br />
             <button
                 onClick={() => {
                     handleChange("Hello")

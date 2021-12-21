@@ -1,5 +1,5 @@
 import { Third } from "./Third"
-export function Second() {
+export function Second({ children }) {
 
     return (
        

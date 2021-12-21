@@ -18,7 +18,7 @@ export const reducer = (state = initState, { type, payload }) => {
       };
 
     case SUB_COUNT:
-      return {
+      return { 
         ...state,
         count: state.count - payload,
       };

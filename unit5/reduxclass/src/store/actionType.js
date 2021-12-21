@@ -9,7 +9,7 @@ export const ADD_TODO_lOADING = "ADD_TODO_lOADING";
 export const ADD_TODO_SUCCESS = "ADD_TODO_SUCCESS";
 export const ADD_TODO_ERROR = "ADD_TODO_ERROR";
 
-// for get data (display all the todos list even aftern refresh (it will be store in db.json sever))
+// for get data (display all the todos list even after refresh (it will be store in db.json sever))
 
 export const GET_TODO_lOADING = "GET_TODO_lOADING";
 export const GET_TODO_SUCCESS = "GET_TODO_SUCCESS";
