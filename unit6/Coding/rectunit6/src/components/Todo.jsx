@@ -13,9 +13,9 @@ export const Todo = () => {
         <input type="text" onChange={(e) => { setText(e.target.value) }} />
         <button onClick={() => {
             dispatch(addTodo({
-                id:  Math.random(),
+                id: Math.random(),
                 status: true,
-                text:text,
+                text: text,
             }))
         }} >Enter</button>
         
