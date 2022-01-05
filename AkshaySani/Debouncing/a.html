@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movie_item{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 25px;
+            text-align: center;
+            justify-content: center;
+        }
+          #movie_item>div{
+              border: 1px solid black;
+              padding: 5px;
+              background-color: gainsboro;
+          }
+          #movie_item>div>img{
+              width: 100%;
+              height: 200px;
+          }
+        
+        #mainbox{
+            display: flex;
+            background-color: rgb(211, 66, 66);
+            justify-content: space-around;
+            margin: 10px;
+           
+        }
+        .name{
+            font-size: 20px;
+        }
+        .value{
+           padding: 10px;
+        }
+        body{
+            background-image:url("https://decider.com/wp-content/uploads/2018/05/netflix-logo.png?w=646&h=431&crop=1");
+        }
+    </style>
+</head>
+<body>
+     <div id="mainbox">
+        <div class="name"><p>NetFlix</p> 
+            <p>Movie Info App</p>
+        </div>
+        <div class="value">
+            <input type="text" id="movie" placeholder="Enter Movie Name" onkeyup="showMovie()">
+            <button>Submit</button>
+        </div>
+      
+        
+    </div>
+      <div id="movie_item"></div>
+    
+
+
+
+    <script>
+        var parentDiv=document.getElementById("movie_item");
+        async function showMovie(){
+            try{
+                let movie=document.getElementById("movie").value;
+            let res = await fetch(`http://www.omdbapi.com/?apikey=6e884fad&t=${movie}`)
+             
+            
+
+            let data= await res.json();
+            console.log(data);
+
+            if(data.Response=="True"){
+                 
+
+                 let div=document.createElement("div");
+
+                 let img=document.createElement("img");
+                 img.src=data.Poster;
+
+                 let p=document.createElement("p");
+                 p.innerText=data.Released;
+
+                 let p_title=document.createElement("h1");
+                 p_title.innerText=data.Title;
+                 
+                 let imdbRating=document.createElement("h4");
+                 imdbRating.innerText=data.imdbRating;
+                 
+                 let actors=document.createElement("h4");
+                 actors.innerText=data.Actors;
+
+                 div.append(img,p_title,p,imdbRating,actors);
+                 parentDiv.append(div);
+            } else{
+                let div=document.createElement("div");
+
+                 let img=document.createElement("img");
+                 img.src="https://media.istockphoto.com/photos/computer-error-picture-id1222806141?k=20&m=1222806141&s=612x612&w=0&h=GoODCHnR0mSefDBLWJpnqVnfRKH9ttdYPO0-KEYbb7w=";
+
+                 let p=document.createElement("p");
+                 p.innerText="NA";
+
+                 let p_title=document.createElement("h1");
+                 p_title.innerText=data.Title;
+                 
+                 let imdbRating=document.createElement("h4");
+                 imdbRating.innerText="NA";
+                 
+                 let actors=document.createElement("h4");
+                 actors.innerText="NA";
+
+                 div.append(img,p_title,p,imdbRating,actors);
+                 parentDiv.append(div);
+
+            }
+
+            }
+            catch(err){
+                console.log(err);
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>

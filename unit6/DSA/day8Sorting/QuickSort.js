@@ -24,6 +24,7 @@ function FindQuickSort(data, left, right) {
     FindQuickSort(data, NewLeft + 1, right);
   }
 }
+
 function runProgram(input) {
   input = input.trim().split("\n");
   let n = +input[0] - 1;

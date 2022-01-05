@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>simple show typed message</h1>
+    <input type="text" placeholder="Enter your text" id="inputBox" />
+    <button onclick="showMessage()">Enter</button>
+    <div id="displayBox"></div>
+  </body>
+  <script>
+   
+    function showMessage() {
+       
+     let inputvalue = document.getElementById("inputBox").value;
+     let displayBox=document.getElementById("displayBox")
+     let eachHeading=document.createElement('h1');
+     eachHeading.innerText=inputvalue;
+      displayBox.appendChild(eachHeading);
+      document.getElementById("inputBox").value="";
+    }
+  </script>
+</html>
