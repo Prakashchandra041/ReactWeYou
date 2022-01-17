@@ -1,5 +1,22 @@
 function nearestSmallEle(data, n) {
-    
+  //  27 11 4 1 4 24 1 -1 
+  // 39 27 11 4 24 32 32 1
+  let l = 0;
+  let r = n - 1;
+  let stack = [];
+  let res = [];
+  for (let i = r; i >= 0; i--){
+    while (stack.length !== 0 && stack[stack.length - 1] >= data[i]) {
+      stack.pop();
+    }
+    if (stack.length === 0) {
+      res.push(-1);
+    } else {
+      res.push(stack[stack.length - 1]);
+    }
+    stack.push(data[i]);
+  }
+  console.log(res.reverse().join(" "));
 }
 
 function runProgram(input) {

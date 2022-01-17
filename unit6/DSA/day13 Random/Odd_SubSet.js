@@ -1,13 +1,3 @@
-function odd_SubSet(str,data,left,right) {
-  if (left < right + 1 && str != "") {
-    console.log("str", str);
-  }  
-
-  for (let i = left; i <= right; i++){
-    odd_SubSet(str+data[i],data,left+1,right)
-  }
-
-}
 
 
 function runProgram(input) {
@@ -17,11 +7,35 @@ function runProgram(input) {
   let str = "";
   let left = 0;
   let right = n - 1;
-    odd_SubSet(str,data,left,right);
+  var count = 0;
+   
+  function odd_SubSet(str, data, left, right) {
+    
+    if (left <= right + 1 && str != "") {
+     
+      let ndata = str.trim().split("");
+      let sum = 0;
+      for (let i = 0; i < ndata.length; i++) {
+        if (ndata[i] !== '-') {
+            sum += ndata[i];
+        }
+      }
+      if (sum % 2 == 1) {
+        count++;
+      }
+    }
+
+    for (let i = left; i <= right; i++) {
+      odd_SubSet(str + data[i], data, i + 1, right);
+    }
+  }
+
+  odd_SubSet(str, data, left, right);
+  console.log(count);
 }
 if (process.env.USERNAME === "hp") {
   runProgram(`3
--8 -4 1`);
+-1 -2 -3`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
