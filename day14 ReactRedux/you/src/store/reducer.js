@@ -1,11 +1,9 @@
 import { ADD_COUNT, ADD_TODO, SUB_COUNT, TODO_DELETE, TODO_TOGGLE } from "./actionType";
 import { store } from "./store";
-
 const init = {
     count: 0,
     todo:[],
 }
-
 export const reducer = (state=init,{type,payload}) => {
     console.log(state);
     switch (type) {

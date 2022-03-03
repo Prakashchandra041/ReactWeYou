@@ -3,7 +3,11 @@ function x() {
     function y() {
         console.log(a);
     }
+    a = 300;
     y();
 }
 
 x();
+
+
+

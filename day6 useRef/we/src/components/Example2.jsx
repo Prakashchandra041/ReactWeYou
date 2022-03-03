@@ -3,12 +3,9 @@
 
 
 import {  useRef } from "react";
-
-  
 export function Example2() {
      
      const eleRef = useRef(null);
-     
      return <>
          <div ref={eleRef}   style={{    //remember don't write eleRef.currnet
           width: "300px", 
